@@ -1,16 +1,16 @@
 Attribute VB_Name = "Módulo1"
-Function mediap(ParamArray values() As Variant) As Double
+Function mediap(ParamArray v() As Variant) As Double
     
     Dim i As Integer
     Dim soman As Double
     Dim nums As Range, pesos As Range
     
-    Set nums = values(0)
-    Set pesos = values(1)
+    Set nums = v(0)
+    Set pesos = v(1)
     
     mediap = -1
     
-    If UBound(values()) <> 1 Or UBound(nums()) <> UBound(pesos()) Then Exit Function
+    If UBound(v()) <> 1 Or UBound(nums()) <> UBound(pesos()) Then Exit Function
     
         For i = 0 To UBound(nums())
                 If IsNumeric(nums(i)) And IsNumeric(pesos(i)) Then
